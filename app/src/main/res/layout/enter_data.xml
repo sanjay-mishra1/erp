@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RadioGroup
+        android:id="@+id/filterGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/filtercollege"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="College Id" />
+
+        <LinearLayout
+            android:id="@+id/collegeLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:hint="From"
+
+                android:minWidth="100dp"
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/startInitials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TO"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:hint="End"
+                android:minWidth="100dp"
+
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/endInitials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <RadioButton
+            android:id="@+id/filterRollno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roll no" />
+
+        <LinearLayout
+            android:id="@+id/rollLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:hint="From"
+
+                android:minWidth="100dp"
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/rollLimit_startInitials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TO"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:hint="End"
+                android:minWidth="100dp"
+
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/rollLimit_endInitials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/filterMarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marks" />
+
+        <LinearLayout
+            android:id="@+id/marksLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:hint="From"
+
+                android:minWidth="100dp"
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/marks_startInitials"
+                    android:layout_width="match_parent"
+                    android:inputType="number"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TO"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:hint="End"
+                android:minWidth="100dp"
+
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/marks_endInitials"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <RadioButton
+            android:id="@+id/filterSemester"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:text="Semester" />
+
+        <LinearLayout
+            android:id="@+id/semLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:hint="From"
+
+                android:minWidth="100dp"
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/sem_startInitials"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TO"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:hint="End"
+                android:minWidth="100dp"
+
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/sem_endInitials"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/filterDepartment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Department" />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:id="@+id/departGroup"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CSE" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+
+                    android:text="EC" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+
+                    android:text="EX" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+
+                    android:text="ME" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:duplicateParentState="false"
+                    android:paddingStart="5dp"
+                    android:text="CE" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+
+                    android:text="Diploma" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+
+                    android:text="AU" />
+            </RadioGroup>
+        </HorizontalScrollView>
+
+        <RadioButton
+            android:id="@+id/filterAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attendance" />
+
+        <LinearLayout
+            android:id="@+id/attendanceLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:hint="From"
+                app:counterMaxLength="2"
+                android:minWidth="100dp"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/attendance_startInitials"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TO"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+
+                android:hint="End"
+                android:minWidth="100dp"
+                app:counterMaxLength="2"
+                app:hintAnimationEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/attendance_endInitials"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <RadioButton
+            android:id="@+id/formFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Form Forward" />
+    </RadioGroup>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:id="@+id/formFilterGroup"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:layout_height="0dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:text="YES"
+            android:id="@+id/form_Yes"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:text="NO"
+            android:id="@+id/form_No"
+            android:layout_height="wrap_content"/>
+
+
+    </RadioGroup>
+    <HorizontalScrollView
+        android:id="@+id/formNoLimit"
+        android:layout_marginStart="45dp"
+         android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+         android:orientation="horizontal">
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:orientation="horizontal"
+           android:layout_height="50dp">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:text="Scholarship"
+            android:id="@+id/scholarship_Limit"
+            android:layout_height="wrap_content" />
+
+            <CheckBox
+        android:layout_width="wrap_content"
+        android:text="Library"
+        android:id="@+id/library_Limit"
+        android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:text="Account"
+            android:id="@+id/account_Limit"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:text="HOD"
+            android:id="@+id/hod_Limit"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:text="Exam"
+            android:id="@+id/exam_Limit"
+            android:layout_height="wrap_content" />
+       </LinearLayout>
+    </HorizontalScrollView>
+    </LinearLayout>

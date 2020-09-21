@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/nothing_found"
+        android:visibility="gone"
+        android:background="#fff"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/no_msg_img"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/no_messages_found" />
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recycler_Chat"
+             android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#00ffffff"
+            android:layout_below="@id/recycler_Chat"
+            android:layout_height="70dp"/>
+    </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+   </ScrollView>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:id="@+id/progressbar"
+
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="loadAllUsers"
+        app:srcCompat="@drawable/ic_message_black_24dp" />
+</RelativeLayout>

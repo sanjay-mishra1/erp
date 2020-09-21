@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+   tools:context=".Setting.SettingHome"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            app:srcCompat="@drawable/ic_edit_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:tint="@color/White"
+            android:id="@+id/changeImageFloat"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            tools:ignore="RelativeOverlap" />
+
+        <include layout="@layout/user_info"
+            android:id="@+id/userScreen"
+            />
+        <LinearLayout
+            android:id="@+id/settingsButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userScreen"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/attendanceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="14sp"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                  android:text="@string/u_more_details_u"
+                android:textColor="@color/colorPrimary" />
+
+            <FrameLayout
+                android:id="@+id/attendanceFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:paddingStart="5dp"
+                android:text="Assignment"
+                android:visibility="gone"
+                android:textColor="#000" />
+            <FrameLayout
+                android:id="@+id/AssignmentFrameLayout"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Quick Links" />
+
+            <Button
+                android:id="@+id/assignmentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="start|center"
+                 android:paddingStart="5dp"
+                android:text="Assignment"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                  tools:ignore="RtlSymmetry" />
+
+            <Button
+                android:id="@+id/editProfileButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:foreground="?attr/selectableItemBackground"                android:gravity="start|center"
+                 android:paddingStart="5dp"
+                android:text="Edit profile"
+                android:textAllCaps="false"
+                android:textColor="#000" />
+
+            <Button
+                android:id="@+id/changePasswordButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:foreground="?attr/selectableItemBackground"                android:gravity="start|center"
+                 android:paddingStart="5dp"
+                android:text="Change password"
+                android:textAllCaps="false"
+                android:textColor="#000" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="App"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/feedbackButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:foreground="?attr/selectableItemBackground"                android:gravity="start|center"
+                 android:paddingStart="5dp"
+                android:text="Feedback"
+                android:textAllCaps="false"
+                android:textColor="#000" />
+
+            <Button
+                android:id="@+id/reportButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:foreground="?attr/selectableItemBackground"                android:gravity="start|center"
+                 android:paddingStart="5dp"
+                android:text="Report problem"
+                android:textAllCaps="false"
+                android:textColor="#000" />
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/White"
+                android:foreground="?attr/selectableItemBackground"                android:gravity="start|center"
+                 android:paddingStart="5dp"
+                android:text="LOGOUT"
+                 android:textColor="@color/colorPrimaryDark" />
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:elevation="10dp"
+               app:cardElevation="10dp"
+
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/app_version"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_marginTop="30dp"
+                   android:text="@string/app_version_formated" />
+
+               <TextView
+                   android:id="@+id/last_login"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="end"
+                   android:layout_marginTop="30dp"
+                   android:layout_marginEnd="5dp"
+                   android:text="Last login" />
+           </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/progressRelative"
+        android:background="#fff"
+        android:visibility="gone"
+           android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

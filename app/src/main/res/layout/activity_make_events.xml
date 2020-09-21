@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_height="wrap_content">
+       <android.support.design.widget.BottomNavigationView
+           android:id="@+id/navigation"
+           style="@style/AppTheme"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:elevation="10dp"
+           android:soundEffectsEnabled="true"
+           android:splitMotionEvents="false"
+           app:elevation="21dp"
+           app:menu="@menu/events_menu">
+
+       </android.support.design.widget.BottomNavigationView>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:layout_marginStart="38dp"
+           android:layout_marginEnd="38dp"
+           android:background="@color/Gray" />
+
+      <android.support.design.widget.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_marginTop="20dp"
+          android:layout_height="wrap_content">
+          <android.support.design.widget.TextInputEditText
+              android:layout_width="match_parent"
+              android:hint="Name"
+              android:inputType="text"
+              android:id="@+id/nameEdit"
+              android:layout_height="wrap_content" />
+      </android.support.design.widget.TextInputLayout>
+
+       <android.support.design.widget.TextInputLayout
+           android:layout_width="match_parent"
+           android:layout_marginTop="20dp"
+           android:id="@+id/linkOnly"
+           android:layout_height="wrap_content">
+           <android.support.design.widget.TextInputEditText
+               android:layout_width="match_parent"
+               android:hint="Link"
+               android:inputType="text"
+                android:id="@+id/linkEdit"
+               android:layout_height="wrap_content" />
+       </android.support.design.widget.TextInputLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:id="@+id/imageEvent"
+           android:orientation="vertical"
+           android:visibility="gone"
+
+           android:layout_height="wrap_content">
+       <ImageView
+           android:id="@+id/uploadImage"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           app:srcCompat="@drawable/add_color"
+           android:tint="@color/Black"
+            android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"
+           android:layout_gravity="center_horizontal"
+           android:background="@drawable/common_google_signin_btn_icon_light_normal_background" />
+
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/recycler_view"
+
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="5dp"
+               android:layout_marginEnd="5dp"
+               >
+               <!--android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"-->
+           </android.support.v7.widget.RecyclerView>
+           <View
+               android:layout_width="match_parent"
+               android:background="#00ffffff"
+                android:layout_height="70dp"/>
+       </LinearLayout>
+   </LinearLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="end|center"
+        android:textColor="@color/White"
+        android:layout_marginRight="10dp"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:tint="#fff"
+        android:scaleType="fitXY"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        app:srcCompat="@drawable/sent"
+        android:id="@+id/nextButton"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

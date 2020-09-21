@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".newChatScreen.help_activity"
+    >
+
+    <item
+        android:id="@+id/block"
+        android:orderInCategory="100"
+        android:title="Block"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Unblock"
+        android:visible="false"
+        android:orderInCategory="100"
+        android:title="Unblock"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/delete"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:title="Delete history"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/follow"
+        android:orderInCategory="100"
+        android:title="Follow"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/unfollow"
+        android:visible="false"
+        android:orderInCategory="100"
+        android:title="Unfollow"
+        app:showAsAction="never" />
+</menu>

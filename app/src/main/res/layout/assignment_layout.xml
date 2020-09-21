@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Current Subject"
+        android:textSize="18sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:padding="20dp"
+        android:id="@+id/spinner"
+        android:popupBackground="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:spinnerMode="dialog">
+
+    </Spinner>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/Gray"
+        android:layout_height="2dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:text="Download Assignment"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#e4fff7f7"
+
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Submitted Assignment"
+            android:textAllCaps="false"
+            android:backgroundTint="#fff"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:text="Assignment Marks"
+            android:textAllCaps="false"
+            android:backgroundTint="#fff"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"/>
+<WebView
+    android:layout_width="match_parent"
+    android:id="@+id/webview"
+    android:visibility="visible"
+    android:layout_height="match_parent">
+
+</WebView>
+ </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar"
+        android:paddingTop="@dimen/appbar_padding_top"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            app:contentInsetLeft="-10dp"
+            android:layout_weight="1"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:contentInsetStart="-10dp"
+            android:layout_gravity="end"
+            android:gravity="end"
+            app:contentInsetStartWithNavigation="0dp"
+            >
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/back"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="start|center"
+                    android:onClick="gobackClicked"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:foregroundTint="#fff"
+                        android:tint="#fff"
+                         android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+               <TextView
+                   android:layout_width="match_parent"
+                   android:text="Blocked Users"
+                   android:textColor="#fff"
+                   android:textSize="20sp"
+                   android:layout_height="wrap_content" />
+                </LinearLayout>
+         </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+ <android.support.v7.widget.RecyclerView
+     android:layout_width="match_parent"
+     android:id="@+id/recycler_view"
+     android:layout_below="@id/appbar"
+     android:layout_height="wrap_content">
+
+ </android.support.v7.widget.RecyclerView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_below="@id/appbar"
+        android:id="@+id/progressbar"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="50dp"
+            android:id="@+id/progress"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Nothing Found"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:id="@+id/text"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

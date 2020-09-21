@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@color/White"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/cancel"
+        android:onClick="cancelAnnouncementClicked"
+        android:layout_alignParentStart="true"
+        android:tint="@color/colorPrimaryDark"
+        android:layout_height="30dp" />
+    <ImageView
+        android:layout_width="30dp"
+        android:onClick="SendAnnouncementClicked"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/sent"
+        android:layout_alignParentEnd="true"
+        android:tint="@color/colorPrimaryDark"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_shape"
+        android:padding="5dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="30dp"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:text="@string/announcement"
+        android:textAllCaps="true"
+
+        android:textColor="#fff"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/shadow9"
+        android:orientation="vertical"
+         android:id="@+id/AnnouncementHome"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+
+
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+
+                android:layout_marginRight="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/announce_as_"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Header"
+                    android:showDividers="end"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="50"
+                    app:counterTextAppearance="@color/colorPrimaryDark">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/announcementHeader"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shadow9"
+                    android:gravity="start"
+                    android:minHeight="300dp"
+                    android:id="@+id/announcementText"
+                    android:paddingBottom="28dp"
+                    android:paddingEnd="30dp"
+                    android:paddingStart="29dp"
+                    android:paddingTop="30dp" />
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:scrollbarStyle="outsideOverlay"
+      android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+                    <Button
+                        android:layout_width="wrap_content"
+                         android:drawablePadding="4dp"
+                        android:layout_height="match_parent"
+                         android:onClick="addCameraOnClick"
+
+                        android:text="Camera" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/White"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        android:onClick="addImageOnClick"
+                        android:text="Add image" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                         android:drawablePadding="4dp"
+                        android:backgroundTint="@color/White"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        android:onClick="addVidoOnClick"
+                        android:text="Add Video" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/White"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        android:onClick="addDocumentOnClick"
+                        android:drawablePadding="4dp"
+                        android:text="Add document" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="4dp"
+                        android:onClick="addPdfOnClick"
+                        android:drawableTint="@color/colorPrimaryDark"
+                        android:backgroundTint="@color/White"
+                        android:text="Add pdf" />
+
+
+                </LinearLayout>
+</HorizontalScrollView>
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recycler_view"
+                     android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Filter Result"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/totalFilteredData"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_data_found" />
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </FrameLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/annoucemnt_filters"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="50dp"
+        android:visibility="gone"
+        android:background="@drawable/shadow9"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:background="@color/White"
+                android:layout_height="60dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="200dp"
+                        android:text="Filter"
+                        android:paddingStart="50dp"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="All"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+        <include layout="@layout/enter_data"/>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="filterOnclicked"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/filterFloating"
+        android:background="@color/colorPrimaryDark"
+        app:srcCompat="@drawable/ic_filter_list_black_24dp"
+        />
+
+</RelativeLayout>

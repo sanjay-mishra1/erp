@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scrollview"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+<android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:id="@+id/recycler_Chat"
+     android:layout_height="wrap_content">
+
+</android.support.v7.widget.RecyclerView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#00ffffff"
+            android:layout_below="@id/recycler_Chat"
+            android:layout_height="70dp"/>
+    </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/progressbar"
+
+        android:layout_centerInParent="true"
+        android:layout_height="match_parent">
+        <include layout="@layout/error_screen"
+            android:layout_centerInParent="true"
+            android:id="@+id/error_screen"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:id="@+id/progress"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <include layout="@layout/no_announcement"
+        android:layout_width="match_parent"
+        android:id="@+id/no_announcement"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_height="match_parent"
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="makeAnnouncmentClicked"
+        android:visibility="gone"
+        app:srcCompat="@drawable/add_color" />
+
+</RelativeLayout>

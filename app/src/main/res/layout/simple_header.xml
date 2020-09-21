@@ -1,0 +1,50 @@
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/appbar"
+    android:paddingTop="@dimen/appbar_padding_top"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        app:contentInsetLeft="-10dp"
+        android:layout_weight="1"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:contentInsetStart="-10dp"
+        android:layout_gravity="end"
+        android:gravity="end"
+
+        app:contentInsetStartWithNavigation="0dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/back"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="start|center"
+                 android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:foregroundTint="#fff"
+                    android:tint="#fff"
+                    android:onClick="onclickback"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/title"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                     android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>

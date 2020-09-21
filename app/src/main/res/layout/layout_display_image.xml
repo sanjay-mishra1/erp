@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelative"
+    android:layout_height="match_parent"
+     android:background="#000">
+
+    <ImageView
+        android:id="@+id/message_body_img"
+             android:layout_centerInParent="true"
+           android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_bar"
+           android:orientation="horizontal"
+        android:background="#9b000000"
+        android:layout_alignParentTop="true"
+          android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+             android:layout_marginStart="10dp"
+
+            android:layout_marginTop="0dp"
+            android:elevation="10dp"
+            android:onClick="backtomessage"
+            android:src="@drawable/back"
+            tools:ignore="VectorDrawableCompat" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:elevation="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp">
+
+
+            <ImageView
+                android:id="@+id/Save_into_storage"
+                android:layout_width="25dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center_vertical"
+                android:onClick="onclick_Download"
+                android:tint="#ff00ddff"
+                android:src="@drawable/download"
+                tools:ignore="VectorDrawableCompat" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="25dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="center_vertical"
+                android:tint="#ff00ddff"
+                android:layout_marginRight="5dp"
+                android:onClick="ONclickShare"
+                android:src="@drawable/share"
+                tools:ignore="VectorDrawableCompat" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+         android:layout_centerHorizontal="true"
+        android:id="@+id/text_message_name"
+        android:textColor="#fff"
+        android:textAlignment="center"
+        android:textSize="18sp"
+         android:background="#86000000"
+        android:visibility="gone"
+         android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

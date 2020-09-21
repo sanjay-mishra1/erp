@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "127482752304",
+    "firebase_url": "https://malwainstituteoftechnologyerp.firebaseio.com",
+    "project_id": "malwainstituteoftechnologyerp",
+    "storage_bucket": "malwainstituteoftechnologyerp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127482752304:android:2a1cbc477e419afa",
+        "android_client_info": {
+          "package_name": "com.example.sanjay.collegeerp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127482752304-b0v14di3bqgbq7jdksba66uhvo9n02ve.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanjay.collegeerp",
+            "certificate_hash": "c8ac53340352bedbbef55920e803ad3945fe074e"
+          }
+        },
+        {
+          "client_id": "127482752304-6mns4nps77poai7vsdium9kifgscqqh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe5AzlHmw_WM97ahaqzXJ665f6METY-FI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127482752304-6mns4nps77poai7vsdium9kifgscqqh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127482752304:android:1d5382a0aad592c5",
+        "android_client_info": {
+          "package_name": "com.example.sanjay.erp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127482752304-39ti6afi2vdf9psgdchubee772tiodej.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanjay.erp",
+            "certificate_hash": "c8ac53340352bedbbef55920e803ad3945fe074e"
+          }
+        },
+        {
+          "client_id": "127482752304-6mns4nps77poai7vsdium9kifgscqqh7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe5AzlHmw_WM97ahaqzXJ665f6METY-FI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127482752304-6mns4nps77poai7vsdium9kifgscqqh7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

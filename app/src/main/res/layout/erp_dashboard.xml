@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+
+    android:background="#F9F9F9"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:paddingStart="15dp"
+    android:layout_marginTop="10dp"
+
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/dashboard"
+        android:textSize="22sp"
+        android:textColor="#000"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/academia"
+        android:textSize="15sp"
+        android:paddingStart="12dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/Gray"
+        android:layout_marginTop="10dp"
+        android:layout_height="2dp"/>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="30dp"
+        android:elevation="10dp"
+        android:layout_height="250dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/events"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:background="#F56854"
+            android:layout_height="wrap_content" />
+        <WebView
+            android:layout_width="match_parent"
+            android:background="@color/Gray"
+            android:layout_margin="10dp"
+            android:id="@+id/eventsWebview"
+            android:layout_height="185dp">
+
+        </WebView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+        android:elevation="10dp"
+        android:layout_height="250dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="@string/general_notices"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:background="#00A65A"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:background="@color/Gray"
+                android:layout_margin="10dp"
+                android:id="@+id/noticeRecycler"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+            android:gravity="center"
+            android:id="@+id/rgpvButton"
+            android:text="@string/rgpv_exam_result"
+            android:textColor="#4B88AB"
+            android:layout_marginBottom="20dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

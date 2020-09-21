@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_auto"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/filter" />
+
+    <item
+        android:id="@+id/navigation_manually"
+        android:icon="@drawable/ic_message_black_24dp"
+        android:title="@string/manually" />
+
+</menu>
